@@ -1,1 +1,1 @@
-![](Coursera X83A2ECZCK9E.jpg)
+![](Coursera\ X83A2ECZCK9E.jpg)
