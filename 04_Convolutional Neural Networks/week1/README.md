@@ -1,4 +1,4 @@
-# Convolutional Neural Networks
+# Foundations of Convolutional Neural Networks
 
 > Week 1 lecture notes
 
