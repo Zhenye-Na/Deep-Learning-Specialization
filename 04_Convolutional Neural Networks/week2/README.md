@@ -118,7 +118,6 @@ If you have a lot lot lot of data, then you should use the existed models (pre-t
   <img src="./figs/color_shifting.png" />
 </p>
 
-https://github.com/Zhenye-Na/Deep-Learning-Specialization/blob/master/04_Convolutional%20Neural%20Networks/week2/figs/color_shifting.png?raw=true
 
 > Advanced: PCA color augmentation
 > 
