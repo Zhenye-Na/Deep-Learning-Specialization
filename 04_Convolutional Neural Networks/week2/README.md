@@ -56,7 +56,7 @@ We have reformulated the fundamental building block (figure above) of our networ
 ## Network in Network (1 by 1 conv)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/iamaaditya/iamaaditya.github.io/master/images/conv_arithmetic/full_padding_no_strides_transposed_small.gif" width="60%"/>
+  <img src="https://raw.githubusercontent.com/iamaaditya/iamaaditya.github.io/master/images/conv_arithmetic/full_padding_no_strides_transposed_small.gif" width="30%"/>
 </p>
 
 Most simplistic explanation would be that $1 \times 1$ convolution leads to dimension reductionality. For example, an image of $200 \times 200$ with $50$ features on convolution with $20$ filters of $1 \times 1$ would result in size of $200 \times 200 \times 20$.
