@@ -94,9 +94,38 @@ $g$ is the gap parameter that regularizes the gap between the distance of two im
 </figure>
 
 
+## Neural Style Transfer
 
 
+### Neural style transfer cost function
 
+> We use $C$ to denote **content image**, the image will be "style transfered", $S$ to denote style image and $G$ to denote **generated image**
+
+Cost function is defined using a content cost function and style cost function
+
+$$ J(G) = \alpha J_{\text{content}}(C, G) + \beta J_{\text{content}}(S, G) $$
+
+
+#### Content cost function
+
+
+<figure>
+    <img src="./figs/content_cost_function.png" class="center">
+</figure>
+
+$$ J_{\text{content}}(C,G) =  \frac{1}{4 \times n_H \times n_W \times n_C}\sum _{ \text{all entries}} (a^{(C)} - a^{(G)})^2\tag{1} $$
+
+Here, $n_H, n_W$ and $n_C$ are the height, width and number of channels of the hidden layer you have chosen
+
+
+#### Style cost function
+
+
+Gram matrix of the "style" image S and that of the "generated" image G. For now, we are using only a single hidden layer $a^{[l]}$, and the corresponding style cost for this layer is defined as: 
+
+$$ J_{\text{style}}^{[l]}(S,G) = \frac{1}{4 \times {n_C}^2 \times (n_H \times n_W)^2} \sum _{i=1}^{n_C}\sum_{j=1}^{n_C}(G^{(S)}_{ij} - G^{(G)}_{ij})^2\tag{2} $$
+
+where $G^{(S)}$ and $G^{(G)}$ are respectively the Gram matrices of the "style" image and the "generated" image, computed using the hidden layer activations for a particular hidden layer in the network.  
 
 
 
