@@ -21,6 +21,8 @@ from music_utils import *
 #----------------------------HELPER FUNCTIONS----------------------------------#
 
 ''' Helper function to parse a MIDI file into its measures and chords '''
+
+
 def __parse_midi(data_fn):
     # Parse the MIDI data for separate melody and accompaniment parts.
     midi_data = converter.parse(data_fn)
@@ -36,7 +38,7 @@ def __parse_midi(data_fn):
             i.quarterLength = 0.25
 
     # Change key signature to adhere to comp_stream (1 sharp, mode = major).
-    # Also add Electric Guitar. 
+    # Also add Electric Guitar.
     melody_voice.insert(0, instrument.ElectricGuitar())
     melody_voice.insert(0, key.KeySignature(sharps=1))
 
@@ -46,11 +48,11 @@ def __parse_midi(data_fn):
     # Verified are good parts: 0, 1, 6, 7 '''
     partIndices = [0, 1, 6, 7]
     comp_stream = stream.Voice()
-    comp_stream.append([j.flat for i, j in enumerate(midi_data) 
-        if i in partIndices])
+    comp_stream.append([j.flat for i, j in enumerate(midi_data)
+                        if i in partIndices])
 
-    # Full stream containing both the melody and the accompaniment. 
-    # All parts are flattened. 
+    # Full stream containing both the melody and the accompaniment.
+    # All parts are flattened.
     full_stream = stream.Voice()
     for i in range(len(comp_stream)):
         full_stream.append(comp_stream[i])
@@ -67,18 +69,18 @@ def __parse_midi(data_fn):
         curr_part.append(part.getElementsByClass(tempo.MetronomeMark))
         curr_part.append(part.getElementsByClass(key.KeySignature))
         curr_part.append(part.getElementsByClass(meter.TimeSignature))
-        curr_part.append(part.getElementsByOffset(476, 548, 
+        curr_part.append(part.getElementsByOffset(476, 548,
                                                   includeEndBoundary=True))
         cp = curr_part.flat
         solo_stream.insert(cp)
 
-    # Group by measure so you can classify. 
+    # Group by measure so you can classify.
     # Note that measure 0 is for the time signature, metronome, etc. which have
     # an offset of 0.0.
     melody_stream = solo_stream[-1]
     measures = OrderedDict()
     offsetTuples = [(int(n.offset / 4), n) for n in melody_stream]
-    measureNum = 0 # for now, don't use real m. nums (119, 120)
+    measureNum = 0  # for now, don't use real m. nums (119, 120)
     for key_x, group in groupby(offsetTuples, lambda x: x[0]):
         measures[measureNum] = [n[1] for n in group]
         measureNum += 1
@@ -91,8 +93,8 @@ def __parse_midi(data_fn):
     offsetTuples_chords = [(int(n.offset / 4), n) for n in chordStream]
 
     # Generate the chord structure. Use just track 1 (piano) since it is
-    # the only instrument that has chords. 
-    # Group into 4s, just like before. 
+    # the only instrument that has chords.
+    # Group into 4s, just like before.
     chords = OrderedDict()
     measureNum = 0
     for key_x, group in groupby(offsetTuples_chords, lambda x: x[0]):
@@ -105,13 +107,16 @@ def __parse_midi(data_fn):
     #           actually show up, while the accompaniment's beat 1 right after does.
     #           Actually on second thought: melody/comp start on Ab, and resolve to
     #           the same key (Ab) so could actually just cut out last measure to loop.
-    #           Decided: just cut out the last measure. 
+    #           Decided: just cut out the last measure.
     del chords[len(chords) - 1]
     assert len(chords) == len(measures)
 
     return measures, chords
 
+
 ''' Helper function to get the grammatical data from given musical data. '''
+
+
 def __get_abstract_grammars(measures, chords):
     # extract grammars
     abstract_grammars = []
@@ -129,15 +134,21 @@ def __get_abstract_grammars(measures, chords):
 
 #----------------------------PUBLIC FUNCTIONS----------------------------------#
 
+
 ''' Get musical data from a MIDI file '''
+
+
 def get_musical_data(data_fn):
-    
+
     measures, chords = __parse_midi(data_fn)
     abstract_grammars = __get_abstract_grammars(measures, chords)
 
     return chords, abstract_grammars
 
+
 ''' Get corpus data from grammatical data '''
+
+
 def get_corpus_data(abstract_grammars):
     corpus = [x for sublist in abstract_grammars for x in sublist.split(' ')]
     values = set(corpus)
@@ -145,6 +156,7 @@ def get_corpus_data(abstract_grammars):
     indices_val = dict((i, v) for i, v in enumerate(values))
 
     return corpus, values, val_indices, indices_val
+
 
 '''
 def load_music_utils():
