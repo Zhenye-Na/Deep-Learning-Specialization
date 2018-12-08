@@ -1,81 +1,34 @@
-# Deep Learning Specialization from deeplearning.ai
+# Deep Learning Specialization | deeplearning.ai
+
+> Deep Learning Specialization. Master Deep Learning, and Break into AI
+> 
+> *Mathjax/Latex is heavily used in this repo. Please download [MathJax Plugin for Github](https://chrome.google.com/webstore/detail/mathjax-plugin-for-github/ioemnmodlmafdkllaclgeombjnmnbima) in order to render Mathjax/Latex in Github correctly*.
+
+<p align="center">
+  <img src="https://d2wvfoqc9gyqzf.cloudfront.net/content/uploads/2018/09/deeplearning-logo-fb.png" width="55%">
+</p>
+
+## Courses
+
+- [Neural Networks and Deep Learning](https://www.coursera.org/learn/neural-networks-deep-learning?specialization=deep-learning)
+- [Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization](https://www.coursera.org/learn/deep-neural-network?specialization=deep-learning)
+- [Structuring Machine Learning Projects](https://www.coursera.org/learn/machine-learning-projects?specialization=deep-learning)
+- [Convolutional Neural Networks](https://www.coursera.org/learn/convolutional-neural-networks?specialization=deep-learning)
+- [Sequence Models](https://www.coursera.org/learn/nlp-sequence-models)
 
 
-## Course 1: Neural Networks and Deep Learning
+## Lecture notes
 
-### About the Course
+- Neural Networks and Deep Learning
+- Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
+- Structuring Machine Learning Projects
+- Convolutional Neural Networks
+    - [Week 1](https://github.com/Zhenye-Na/Deep-Learning-Specialization/blob/master/04_Convolutional%20Neural%20Networks/week1/README.md)
+    - [Week 2](https://github.com/Zhenye-Na/Deep-Learning-Specialization/blob/master/04_Convolutional%20Neural%20Networks/week2/README.md)
+    - [Week 3](https://github.com/Zhenye-Na/Deep-Learning-Specialization/blob/master/04_Convolutional%20Neural%20Networks/week3/README.md)
+    - [Week 4](https://github.com/Zhenye-Na/Deep-Learning-Specialization/blob/master/04_Convolutional%20Neural%20Networks/week4/README.md)
+- Sequence Models
+    - [Week 1](https://github.com/Zhenye-Na/Deep-Learning-Specialization/tree/master/05_Sequence%20Models/week1/README.md)
+    - [Week 2](https://github.com/Zhenye-Na/Deep-Learning-Specialization/blob/master/05_Sequence%20Models/week2/README.md)
+    - [Week 3](https://github.com/Zhenye-Na/Deep-Learning-Specialization/blob/master/05_Sequence%20Models/week3/README.md)
 
-If you want to break into cutting-edge AI, this course will help you do so. Deep learning engineers are highly sought after, and mastering deep learning will give you numerous new career opportunities. Deep learning is also a new "superpower" that will let you build AI systems that just weren't possible a few years ago. 
-
-In this course, you will learn the foundations of deep learning. When you finish this class, you will:
-
-- Understand the major technology trends driving Deep Learning
-- Be able to build, train and apply fully connected deep neural networks 
-- Know how to implement efficient (vectorized) neural networks 
-- Understand the key parameters in a neural network's architecture 
-
-This course also teaches you how Deep Learning actually works, rather than presenting only a cursory or surface-level description. So after completing it, you will be able to apply deep learning to a your own applications. If you are looking for a job in AI, after this course you will also be able to answer basic interview questions. 
-
-
-## Course 2: Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
-
-### About the Course
-
-This course will teach you the "magic" of getting deep learning to work well. Rather than the deep learning process being a black box, you will understand what drives performance, and be able to more systematically get good results. You will also learn TensorFlow. 
-
-After 3 weeks, you will: 
-
-- Understand industry best-practices for building deep learning applications. 
-- Be able to effectively use the common neural network "tricks", including initialization, L2 and dropout regularization, Batch normalization, gradient checking, 
-- Be able to implement and apply a variety of optimization algorithms, such as mini-batch gradient descent, Momentum, RMSprop and Adam, and check for their convergence. 
-- Understand new best-practices for the deep learning era of how to set up train/dev/test sets and analyze bias/variance
-- Be able to implement a neural network in TensorFlow.
-
-
-## Course 3: Structuring Machine Learning Projects
-
-### About the Course
-
-You will learn how to build a successful machine learning project. If you aspire to be a technical leader in AI, and know how to set direction for your team's work, this course will show you how.
-
-Much of this content has never been taught elsewhere, and is drawn from my experience building and shipping many deep learning products. This course also has two "flight simulators" that let you practice decision-making as a machine learning project leader. This provides "industry experience" that you might otherwise get only after years of ML work experience.
-
-After 2 weeks, you will:
-
-- Understand how to diagnose errors in a machine learning system, and 
-- Be able to prioritize the most promising directions for reducing error
-- Understand complex ML settings, such as mismatched training/test sets, and comparing to and/or surpassing human-level performance
-- Know how to apply end-to-end learning, transfer learning, and multi-task learning
-
-I've seen teams waste months or years through not understanding the principles taught in this course. I hope this two week course will save you months of time.
-
-This is a standalone course, and you can take this so long as you have basic machine learning knowledge.
-
-
-## Course 4: Convolutional Neural Networks
-
-### About the Course
-
-This course will teach you how to build convolutional neural networks and apply it to image data. Thanks to deep learning, computer vision is working far better than just two years ago, and this is enabling numerous exciting applications ranging from safe autonomous driving, to accurate face recognition, to automatic reading of radiology images. 
-
-You will:
-
-- Understand how to build a convolutional neural network, including recent variations such as residual networks.
-- Know how to apply convolutional networks to visual detection and recognition tasks.
-- Know to use neural style transfer to generate art.
-- Be able to apply these algorithms to a variety of image, video, and other 2D or 3D data.
-
-## Course 5: Sequence Models
-
-### About the Course
-
-This course will teach you how to build models for natural language, audio, and other sequence data. Thanks to deep learning, sequence algorithms are working far better than just two years ago, and this is enabling numerous exciting applications in speech recognition, music synthesis, chatbots, machine translation, natural language understanding, and many others. 
-
-You will:
-
-- Understand how to build and train Recurrent Neural Networks (RNNs), and commonly-used variants such as GRUs and LSTMs.
-- Be able to apply sequence models to natural language problems, including text synthesis. 
-- Be able to apply sequence models to audio applications, including speech recognition and music synthesis.
-
-
-deeplearning.ai is also partnering with the NVIDIA Deep Learning Institute (DLI) in Course 5, Sequence Models, to provide a programming assignment on Machine Translation with deep learning. You will have the opportunity to build a deep learning project with cutting-edge, industry-relevant content.
